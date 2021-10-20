@@ -1,0 +1,9 @@
+spring:
+   datasource:
+      url: jdbc:postgresql://ec2-3-220-90-40.compute-1.amazonaws.com:5432/d7pjies747krj2?currentSchema=builders
+      username: tyafdhzujjqnsj
+      password: 7dab8da29c88b96a906ce4f84c42de27067f2989c7758b652d23cee8b4dceca5
+   jpa:
+      database-platform: org.hibernate.dialect.PostgreSQL9Dialect
+      hibernate:
+         dss-auto: validate
