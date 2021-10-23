@@ -33,7 +33,8 @@ Após a conclusão executar:
 ## Acesso API:
 Para verificar a documentação basta acessar o Swagger após iniciar o projeto no endereço:
 
-[http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html)
+ - Local : [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html)
+ - Remoto: [https://app-client-builders.herokuapp.com/swagger-ui.html](https://app-client-builders.herokuapp.com/swagger-ui.html) 
 
 Caso queira podera ser importado o arquivo `Cliente.postman_collection.json` no aplicativo Postman 
 

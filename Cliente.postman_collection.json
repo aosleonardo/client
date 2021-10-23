@@ -19,7 +19,53 @@
 			"response": []
 		},
 		{
+			"name": "Buscar todos clientes - remoto",
+			"request": {
+				"url": "http://localhost:8080/cliente",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "Busca todos os cliente, por default busca somente os 10 primeiros ordenamos por nome"
+			},
+			"response": []
+		},
+		{
 			"name": "Busccar todos os clientes com paginação",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8080/cliente?page=0&size=10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cliente"
+					],
+					"query": [
+						{
+							"key": "size",
+							"value": "10",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "page",
+							"value": "0",
+							"equals": true
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "Busca com paginação"
+			},
+			"response": []
+		},
+		{
+			"name": "Busccar todos os clientes com paginação - remoto",
 			"request": {
 				"url": {
 					"raw": "http://localhost:8080/cliente?page=0&size=10",
@@ -96,7 +142,92 @@
 			"response": []
 		},
 		{
+			"name": "Buscar por CPF com paginação - remoto",
+			"request": {
+				"url": {
+					"raw": "https://app-client-builders.herokuapp.com/cliente?document=37550189005&page=0&size=10",
+					"protocol": "https",
+					"host": [
+						"app-client-builders",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"cliente"
+					],
+					"query": [
+						{
+							"key": "document",
+							"value": "37550189005",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "page",
+							"value": "0",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "size",
+							"value": "10",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "Busca por CPF"
+			},
+			"response": []
+		},
+		{
 			"name": "Buscar por nome com paginação",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8080/cliente?name=Durval%20Silva&page=0&size=10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cliente"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Durval%20Silva",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "page",
+							"value": "0",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "size",
+							"value": "10",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "Busca por nome paginada"
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar por nome com paginação - remoto",
 			"request": {
 				"url": {
 					"raw": "http://localhost:8080/cliente?name=Durval%20Silva&page=0&size=10",
@@ -186,6 +317,55 @@
 			"response": []
 		},
 		{
+			"name": "Buscar por nome e CPF com paginação - remoto",
+			"request": {
+				"url": {
+					"raw": "https://app-client-builders.herokuapp.com/cliente?document=29211156033&name=Durval%20Silva&page=0&size=10",
+					"protocol": "https",
+					"host": [
+						"app-client-builders",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"cliente"
+					],
+					"query": [
+						{
+							"key": "document",
+							"value": "29211156033",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "name",
+							"value": "Durval%20Silva",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "page",
+							"value": "0",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "size",
+							"value": "10",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "Busca por nome e cpf mais paginação"
+			},
+			"response": []
+		},
+		{
 			"name": "Alterar Cliente",
 			"request": {
 				"url": "http://localhost:8080/cliente/939278f4-06bc-4a05-ba94-23e1ac8a7e4a",
@@ -206,7 +386,47 @@
 			"response": []
 		},
 		{
+			"name": "Alterar Cliente - remoto",
+			"request": {
+				"url": "http://localhost:8080/cliente/939278f4-06bc-4a05-ba94-23e1ac8a7e4a",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n       \"id\": \"939278f4-06bc-4a05-ba94-23e1ac8f7e4b\",\n      \"name\": \"Leonardo Augusto Oliveira Silva\",\n       \"birthDate\": \"1987-12-04\",\n       \"document\": \"08750454641\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
 			"name": "Add Cliente",
+			"request": {
+				"url": "localhost:8080/cliente",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n      \"name\": \"Marco Antonio de freitas\",\n       \"birthDate\": \"1987-12-12\",\n       \"document\": \"60296193062\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Add Cliente - remoto",
 			"request": {
 				"url": "localhost:8080/cliente",
 				"method": "POST",
